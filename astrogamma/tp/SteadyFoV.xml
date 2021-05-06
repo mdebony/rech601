@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<source_library title="source library">
+  <source name="CenA" tscalc="1" type="PointSource">
+    <spectrum type="PowerLaw">
+      <parameter free="1" max="1000" min="1e-05" name="Prefactor" scale="1e-18" value="1.49"/>
+      <parameter free="0" max="5" min="-5" name="Index" scale="-1" value="2.5"/>
+      <parameter free="0" max="3e+07" min="30" name="Scale" scale="1" value="1e+06"/>
+    </spectrum>    
+    <spatialModel type="SkyDirFunction">
+      <parameter free="0" max="360" min="-360" name="RA" scale="1" value="201.365063"/>
+      <parameter free="0" max="90" min="-90" name="DEC" scale="1" value="-43.019113  "/>
+    </spatialModel>
+  </source>
+  <source name="source2" tscalc="1" type="PointSource">
+    <spectrum type="PowerLaw">
+      <parameter free="1" max="1000" min="1e-05" name="Prefactor" scale="1e-18" value="1.9"/>
+      <parameter free="0" max="5" min="-5" name="Index" scale="-1" value="2.5"/>
+      <parameter free="0" max="3e+07" min="30" name="Scale" scale="1" value="1e+06"/>
+    </spectrum>
+    <spatialModel type="SkyDirFunction">
+      <parameter free="0" max="360" min="-360" name="RA" scale="1" value="198.764125"/>
+      <parameter free="0" max="90" min="-90" name="DEC" scale="1" value="-42.613820 "/>
+    </spatialModel>
+  </source>
+  <source instrument="CTA" name="CTABackgroundModel" type="CTAIrfBackground">
+    <spectrum type="PowerLaw">
+      <parameter free="1" max="1000" min="0.001" name="Prefactor" scale="1" value="1"/>
+      <parameter free="1" max="5" min="-5" name="Index" scale="1" value="0"/>
+      <parameter free="0" max="1000" min="0.01" name="PivotEnergy" scale="1e+06" value="1"/>
+    </spectrum>
+  </source>
+</source_library>
